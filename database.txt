@@ -1,0 +1,50 @@
+create table yelp_user (
+since varchar(50),
+cool int,
+funny int,
+useful int,
+review_count int,
+name varchar(60),
+user_id varchar(60),
+fans int,
+avg_stars double(5,2),
+type varchar(50)
+);
+
+create table yelp_review(
+ruser_id varchar(50),
+rcool int,
+rfunny int,
+ruseful int,
+revdate varchar(50),
+review_id varchar(50),
+business_id varchar(50),
+text blob,
+stars int,
+rtype varchar(50)
+);
+
+create table yelp_business(
+business_id varchar(50),
+address varchar(200),
+city varchar(60),
+state varchar(60),
+open boolean,
+bname varchar(60),
+reviewcount int,
+latitude double(5,2),
+longitude double(5,2),
+stars double(5,2),
+type varchar(50)
+);
+
+create table attributes(
+business_id varchar(50), 
+attribute varchar(50), 
+value varchar(50)
+);
+
+create table categories(
+business_id varchar(50), 
+category varchar(50)
+);
